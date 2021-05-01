@@ -1,0 +1,14 @@
+{
+  "token": "YQSn-xWAQiiEh9qM58wZNnyQS7FUdoqGIUAbrh7T",
+  "update_period": 300,
+  "zones": {
+    "zone1": [
+      "name-a.zone1.com",
+      "name-b.zone1.com"
+    ],
+    "zone2": [
+      "name-c.zone2.com",
+      "name-d.zone2.com"
+    ]
+  }
+}
