@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"encoding/json"
+	"flag"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -59,9 +60,11 @@ func getMyIP() (string, error) {
 //   Update DNS record
 func main() {
 	// TODO: add -c flag for config path
-	configPath := "cloudflare-ddns.json"
-	log.Printf("Using config file at %v", configPath)
-	config := loadConfig(configPath)
+	configPath := flag.String("config", "cloudflare-ddns.json", "Path to config file")
+	flag.Parse()
+
+	log.Printf("Using config file at %v", *configPath)
+	config := loadConfig(*configPath)
 
 	api, err := cloudflare.NewWithAPIToken(config.Token)
 	if err != nil {
