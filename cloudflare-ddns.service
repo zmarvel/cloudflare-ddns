@@ -1,0 +1,11 @@
+[Unit]
+Description=cloudflare-ddns
+
+[Service]
+Type=simple
+User=cloudflare-ddns
+Group=cloudflare-ddns
+ExecStart=/usr/local/bin/cloudflare-ddns -config /etc/cloudflare-ddns.json
+
+[Install]
+WantedBy=multi-user.target
