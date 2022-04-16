@@ -13,7 +13,7 @@ pipeline {
 
         stage('Build Docker image') {
             steps {
-                sh 'docker build -t cloudflare-ddns .'
+                sh 'docker build -t zpmarvel/cloudflare-ddns .'
             }
         }
 
